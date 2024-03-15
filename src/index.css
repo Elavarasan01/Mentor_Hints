@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.css-1en4zh7-MuiFormLabel-root-MuiInputLabel-root{
+  color: #fff !important;
+  line-height: 1em !important;
+}
