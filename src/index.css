@@ -16,3 +16,27 @@ code {
   color: #fff !important;
   line-height: 1em !important;
 }
+
+.css-14yi5no-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root{
+  min-width: 220px !important;
+}
+
+.top-right{
+  background-image: url("assets/star.png");
+  background-size: 15% 15%;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.top-right::after{
+  content: "";
+position: absolute;
+top: 180px;
+right: 0px;
+width: 20%;
+height: 35%;
+background-size: 38% 34%;
+  background-image: url('assets/curlyline.png');
+  background-repeat: no-repeat;
+  /* background-size: 15% 15%; */
+}
