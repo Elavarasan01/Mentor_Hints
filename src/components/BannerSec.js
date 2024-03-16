@@ -9,7 +9,7 @@ import Star from '../assets/star.png';
 import Curve from '../assets/curlyline.png';
 import StarIcon from '@mui/icons-material/Star';
 
-export default function Hero() {
+export default function BannerSec() {
     return (
         <Box
             id="hero"

@@ -40,3 +40,19 @@ background-size: 38% 34%;
   background-repeat: no-repeat;
   /* background-size: 15% 15%; */
 }
+
+.container-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image2{
+  position: absolute;
+  top:50%;
+  left: 48%;
+}
+
+
+
