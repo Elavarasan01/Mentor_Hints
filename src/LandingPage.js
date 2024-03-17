@@ -10,14 +10,14 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import AppAppBar from './components/AppAppBar';
 import Highlights from './components/Highlights';
-import Pricing from './components/Pricing';
 import Features from './components/Features';
 import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
 import BannerSec from './components/BannerSec';
 import MentorSec from './components/MentorsSec';
+import PostSec from './components/PostSec';
+import GD from './components/GD';
 
 function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
   return (
@@ -88,9 +88,9 @@ export default function LandingPage() {
         <Divider />
         <Highlights />
         <Divider />
-        <Pricing />
+        <PostSec />
         <Divider />
-        <FAQ />
+        <GD />
         <Divider />
         <Footer />
       </Box>
