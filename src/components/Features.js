@@ -30,8 +30,8 @@ export default function Features() {
         </Typography>
       </div>
       <div className='container-image'>
-       <img src={VideoBack} alt='background video' className='image' height={300} width={700}/>
-       <img src={Play} alt='play button' className='image2' height={50} width={50}/>
+        <img src={VideoBack} alt='background video' className='image' height={300} width={700} />
+        <img src={Play} alt='play button' className='image2' height={50} width={50} />
       </div>
     </Container>
   );

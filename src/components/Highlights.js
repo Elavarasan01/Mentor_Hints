@@ -116,7 +116,11 @@ export default function Highlights() {
             Feedback
           </Typography>
           <div style={{ margin: "-2rem 1rem 0rem 8rem" }}><img src={UnderLine} height={10} width={150} alt="tick mark" /></div>
+          <Typography variant="body1" color="text.secondary">
+            Various versions have evolved over the years, sometimes by accident,
+          </Typography>
         </Typography>
+
 
         <Grid container spacing={2.5} sx={{ justifyContent: "center" }}>
           {steps2.map((info, index) => (
@@ -130,7 +134,7 @@ export default function Highlights() {
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <Typography variant="h5" component="h5" sx={{ marginTop: 1, display: "flex", alignItems: "center" }}>
                     <div><img src={info.imageUrl} height={35} width={35} /></div>
-                     <div>{info.head} <br/> <Typography sx={{fontSize:"11px",margin:"2px"}}>{info.subHead}</Typography></div>
+                    <div>{info.head} <br /> <Typography sx={{ fontSize: "11px", margin: "2px" }}>{info.subHead}</Typography></div>
                   </Typography>
                   <div><img src={Quatation} alt='quatation mark' width={30} height={30} /></div>
                 </div>
@@ -145,30 +149,30 @@ export default function Highlights() {
           ))}
         </Grid>
         <MobileStepper
-              variant="dots"
-              steps={4}
-              position="static"
-              activeStep={activeStep}
-              sx={{ maxWidth: 400, flexGrow: 1,backgroundColor:"transparent" }}
-              nextButton={
-                <Button size="small" onClick={handleNext} disabled={activeStep === steps.length}>
-                  {theme.direction === 'rtl' ? (
-                    <KeyboardArrowLeft />
-                  ) : (
-                    <KeyboardArrowRight />
-                  )}
-                </Button>
-              }
-              backButton={
-                <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                  {theme.direction === 'rtl' ? (
-                    <KeyboardArrowRight />
-                  ) : (
-                    <KeyboardArrowLeft />
-                  )}
-                </Button>
-              }
-            />
+          variant="dots"
+          steps={4}
+          position="static"
+          activeStep={activeStep}
+          sx={{ maxWidth: 400, flexGrow: 1, backgroundColor: "transparent" }}
+          nextButton={
+            <Button size="small" onClick={handleNext} disabled={activeStep === steps.length}>
+              {theme.direction === 'rtl' ? (
+                <KeyboardArrowLeft />
+              ) : (
+                <KeyboardArrowRight />
+              )}
+            </Button>
+          }
+          backButton={
+            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+              {theme.direction === 'rtl' ? (
+                <KeyboardArrowRight />
+              ) : (
+                <KeyboardArrowLeft />
+              )}
+            </Button>
+          }
+        />
       </Container>
     </Box>
   );

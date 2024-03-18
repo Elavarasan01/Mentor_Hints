@@ -18,6 +18,8 @@ import BannerSec from './components/BannerSec';
 import MentorSec from './components/MentorsSec';
 import PostSec from './components/PostSec';
 import GD from './components/GD';
+import MentorOutline from './assets/mentorOutline.png';
+import { Grid } from '@mui/material';
 
 function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
   return (
@@ -83,21 +85,15 @@ export default function LandingPage() {
       <Box sx={{ bgcolor: 'background.default' }}>
         <MentorSec />
         <Features />
-        <Divider />
         <Testimonials />
-        <Divider />
         <Highlights />
-        <Divider />
         <PostSec />
-        <Divider />
-        <GD />
-        <Divider />
+        <GD /> 
         <Footer />
+        <Grid sx={{justifyContent:"center"}} md={12}>
+      <img src={MentorOutline} alt='mentor logo' height={200} width={500}/>
+     </Grid>
       </Box>
-      <ToggleCustomTheme
-        showCustomTheme={showCustomTheme}
-        toggleCustomTheme={toggleCustomTheme}
-      />
     </ThemeProvider>
   );
 }

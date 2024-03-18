@@ -2,8 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import { Button, Card, CardContent } from '@mui/material';
 import UnderLine from "../assets/underline.png";
 import AudiotrackOutlinedIcon from '@mui/icons-material/AudiotrackOutlined';
@@ -14,17 +12,11 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import BussinessImg from '../assets/BussinessImg.png';
 import DesignImg from '../assets/DesignImg.png';
 import BoyImg from '../assets/HtmlImg.png';
-
 import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  padding: theme.spacing(1),
-  color: theme.palette.text.secondary,
-}));
 const steps = [{ imgUrl: BoyImg, head: "Ragul", desc: "Frontend @ Company Name", year: 2 },
 { imgUrl: DesignImg, head: "Lilly", desc: "UIUX Designer  @ Company Name", year: 7 },
 { imgUrl: BussinessImg, head: "John", desc: "Frontend  @ Company Name", year: 4 },

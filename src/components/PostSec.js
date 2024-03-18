@@ -34,7 +34,7 @@ const steps=[
 
 export default function PostSec() {
   return (
-    <Container
+    <Container id="pricing"
       sx={{
         display: 'flex',
         flexDirection: 'column',

@@ -5,8 +5,6 @@ import { Button, TextField, Typography } from '@mui/material';
 import UnderLine from '../assets/underline.png';
 import Frame1 from '../assets/girl-frame.png';
 import Frame2 from '../assets/boy-frame.png';
-import Star from '../assets/star.png';
-import Curve from '../assets/curlyline.png';
 import StarIcon from '@mui/icons-material/Star';
 
 export default function BannerSec() {
@@ -27,22 +25,22 @@ export default function BannerSec() {
                 }}
             >
                 <div style={{ display: "flex" }}>
-                    <div style={{textAlign:"left",paddingLeft:"5rem"}}>
+                    <div style={{ textAlign: "left", paddingLeft: "5rem" }}>
                         <Typography variant='h6'>START TO SUCCESS</Typography>
                         <Typography sx={{ color: "#fff" }} variant='h4'>Learn to code</Typography>
-                        <span style={{ marginLeft: "9rem"}}><img src={UnderLine} height={10} width={70} alt="tick mark" /></span>
-                        <Typography sx={{ color: "#fff",letterSpacing:"3px"}} variant='h4'>with your personal mentor</Typography>
-                        <span style={{ marginLeft: "14rem"}}><img src={UnderLine} height={10} width={100} alt="tick mark" /></span>
-                        <p style={{color:"#fff"}}>Get into tech with 1:1 live sessions</p>
-                     <Button variant='contained' sx={{backgroundColor:"#FF914D",margin:"5px"}}>Match me with your tutor</Button>
-                     <TextField label="Search by mentor" sx={{paddingTop:"0px",margin:"5px",width:"50%"}}/> 
+                        <span style={{ marginLeft: "9rem" }}><img src={UnderLine} height={10} width={70} alt="tick mark" /></span>
+                        <Typography sx={{ color: "#fff", letterSpacing: "3px" }} variant='h4'>with your personal mentor</Typography>
+                        <span style={{ marginLeft: "14rem" }}><img src={UnderLine} height={10} width={100} alt="tick mark" /></span>
+                        <p style={{ color: "#fff" }}>Get into tech with 1:1 live sessions</p>
+                        <Button variant='contained' sx={{ backgroundColor: "#FF914D", margin: "5px" }}>Match me with your tutor</Button>
+                        <TextField label="Search by mentor" sx={{ paddingTop: "0px", margin: "5px", width: "50%" }} />
                     </div>
-                    <div style={{display:"flex",paddingLeft:"5rem"}} className='top-right'>
-                      <img src={Frame1} alt='girl in the frame' height={270} width={200} style={{zIndex:'1'}}/>
-                      <img src={Frame2} alt='boy in the frame' height={270} width={200} style={{zIndex:'33',marginLeft:"-30px"}}/>
-                    <div style={{display:"flex",alignItems:"center",marginLeft:"-4rem",marginTop:"9rem",zIndex:"99"}}>
-                    <Button size='large' variant='contained' startIcon={<StarIcon sx={{backgroundColor:"transparent",color:"#0B93DB"}}/>} sx={{backgroundColor:"#fff",color:"#000"}}>5.0 rating</Button>
-                    </div>
+                    <div style={{ display: "flex", paddingLeft: "5rem" }} className='top-right'>
+                        <img src={Frame1} alt='girl in the frame' height={270} width={200} style={{ zIndex: '1' }} />
+                        <img src={Frame2} alt='boy in the frame' height={270} width={200} style={{ zIndex: '33', marginLeft: "-30px" }} />
+                        <div style={{ display: "flex", alignItems: "center", marginLeft: "-4rem", marginTop: "9rem", zIndex: "99" }}>
+                            <Button size='large' variant='contained' startIcon={<StarIcon sx={{ backgroundColor: "transparent", color: "#0B93DB" }} />} sx={{ backgroundColor: "#fff", color: "#000" }}>5.0 rating</Button>
+                        </div>
                     </div>
                 </div>
             </Container>

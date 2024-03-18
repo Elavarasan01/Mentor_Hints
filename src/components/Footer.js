@@ -1,118 +1,48 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-
-import FacebookIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/X';
 import { Grid } from '@mui/material';
-import GroupDiscuss from '../assets/GD.png';
-
-const logoStyle = {
-  width: '140px',
-  height: 'auto',
-};
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" mt={1}>
-      {'Copyright © '}
-      <Link href="https://mui.com/">Sitemark&nbsp;</Link>
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
+import LogoMentor from '../assets/MentorLogo.png';
+import facebook from '../assets/_Facebook.png';
+import insta from '../assets/_Instagram.png';
+import twitter from '../assets/_Twitter.png';
+import linkedIn from '../assets/_Linkedin.png';
 
 export default function Footer() {
   return (
-    <Container
+    <Container id="faq"
       sx={{
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'center',
         gap: { xs: 4, sm: 8 },
         py: { xs: 8, sm: 10 },
         textAlign: { sm: 'center', md: 'left' },
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          width: '100%',
-          justifyContent: 'space-between',
-          backgroundColor:"#E4F0FF",
-          padding:"2rem"
-        }}
-      >
-       <Grid md={5}>
-        <img src={GroupDiscuss} alt='Group Disscusstion' height={300} width={500}/>
-       </Grid>
-       <Grid md={7}></Grid>
-      </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          pt: { xs: 4, sm: 8 },
-          width: '100%',
-          borderTop: '1px solid',
-          borderColor: 'divider',
-        }}
-      >
-        <div>
-          <Link color="text.secondary" href="#">
-            Privacy Policy
-          </Link>
-          <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
-            &nbsp;•&nbsp;
-          </Typography>
-          <Link color="text.secondary" href="#">
-            Terms of Service
-          </Link>
-          <Copyright />
+      <Grid xs={6} sm={6} >
+        <div style={{ display: "flex", justifyContent: "center" }}> <img src={LogoMentor} alt='brand icon' height={50} width={150} /></div>
+        <div style={{ display: "flex", marginTop: "2rem" }}>
+          <img src={facebook} alt='facebook' height={25} width={25} style={{ margin: "5px" }} />
+          <img src={twitter} alt='twitter' height={25} width={25} style={{ margin: "5px" }} />
+          <img src={insta} alt='instagram' height={25} width={25} style={{ margin: "5px" }} />
+          <img src={linkedIn} alt='linkedin' height={25} width={25} style={{ margin: "5px" }} />
         </div>
-        <Stack
-          direction="row"
-          justifyContent="left"
-          spacing={1}
-          useFlexGap
-          sx={{
-            color: 'text.secondary',
-          }}
-        >
-          <IconButton
-            color="inherit"
-            href="https://github.com/mui"
-            aria-label="GitHub"
-            sx={{ alignSelf: 'center' }}
-          >
-            <FacebookIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://twitter.com/MaterialUI"
-            aria-label="X"
-            sx={{ alignSelf: 'center' }}
-          >
-            <TwitterIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://www.linkedin.com/company/mui/"
-            aria-label="LinkedIn"
-            sx={{ alignSelf: 'center' }}
-          >
-            <LinkedInIcon />
-          </IconButton>
-        </Stack>
-      </Box>
+      </Grid>
+      <Grid xs={6} sm={6} sx={{ display: "flex", gap: { xs: 6, sm: 10 }, justifyContent: "flex-end" }} >
+        <Grid md={3}> <Typography variant="body2" color="text.secondary" mt={1}>HOW IT WORKS</Typography></Grid>
+        <Grid md={3}>
+          <Typography variant="body2" color="text.secondary" mt={1}>FAQ</Typography>
+          <Typography variant="body2" color="text.secondary" mt={1}>PRIVACY POLICY</Typography>
+          <Typography variant="body2" color="text.secondary" mt={1}>TERMS AND CONDITIONS</Typography>
+        </Grid>
+        <Grid md={3}>
+          <Typography variant="body2" color="text.secondary" mt={1}>BLOG</Typography>
+        </Grid>
+        <Grid md={3}>
+          <Typography variant="body2" color="text.secondary" mt={1}>Are you hiring find talend</Typography>
+        </Grid>
+      </Grid>
     </Container>
   );
 }

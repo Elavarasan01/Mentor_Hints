@@ -1,6 +1,5 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -63,11 +62,11 @@ function AppAppBar({ mode, toggleColorMode }) {
               maxHeight: 40,
             })}
           >
-             <img
-                src={BrandLogo}
-                style={logoStyle}
-                alt="logo of sitemark"
-              />
+            <img
+              src={BrandLogo}
+              style={logoStyle}
+              alt="logo of sitemark"
+            />
             <Box
               sx={{
                 flexGrow: 1,
@@ -75,10 +74,10 @@ function AppAppBar({ mode, toggleColorMode }) {
                 alignItems: 'center',
                 ml: '-18px',
                 px: 0,
-                justifyContent:"center"
+                justifyContent: "center"
               }}
             >
-             
+
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
                   onClick={() => scrollToSection('features')}
@@ -130,7 +129,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               }}
             >
               <Button
-               startIcon={<LockOutlinedIcon/>}
+                startIcon={<LockOutlinedIcon />}
                 variant="text"
                 size="small"
               >
@@ -139,7 +138,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               <Button
                 variant="contained"
                 size="mediem"
-                sx={{backgroundColor:"#0B93DB"}}
+                sx={{ backgroundColor: "#0B93DB" }}
               >
                 Sign up for free
               </Button>
@@ -174,7 +173,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                   </Box>
                   <MenuItem onClick={() => scrollToSection('features')}>
-                  Home
+                    Home
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('testimonials')}>
                     About
@@ -185,8 +184,8 @@ function AppAppBar({ mode, toggleColorMode }) {
                   <MenuItem onClick={() => scrollToSection('pricing')}>
                     Blog
                   </MenuItem>
-                  <MenuItem onClick={()=>scrollToSection('faq')}>
-                   Contact
+                  <MenuItem onClick={() => scrollToSection('faq')}>
+                    Contact
                   </MenuItem>
                   <Divider />
                   <MenuItem>
