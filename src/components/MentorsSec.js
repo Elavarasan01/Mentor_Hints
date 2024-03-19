@@ -2,13 +2,12 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Button, Card, CardContent } from '@mui/material';
+import { Button } from '@mui/material';
 import UnderLine from "../assets/underline.png";
 import AudiotrackOutlinedIcon from '@mui/icons-material/AudiotrackOutlined';
 import { ReactComponent as PenNib } from '../assets/PenNib.svg';
 import { ReactComponent as StageMike } from '../assets/MicrophoneStage.svg';
 import { ReactComponent as TextIcon } from '../assets/FileHtml.svg';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import BussinessImg from '../assets/BussinessImg.png';
 import DesignImg from '../assets/DesignImg.png';
 import BoyImg from '../assets/HtmlImg.png';
@@ -16,11 +15,12 @@ import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import HoverCard from './HoverCard';
 
-const steps = [{ imgUrl: BoyImg, head: "Ragul", desc: "Frontend @ Company Name", year: 2 },
-{ imgUrl: DesignImg, head: "Lilly", desc: "UIUX Designer  @ Company Name", year: 7 },
-{ imgUrl: BussinessImg, head: "John", desc: "Frontend  @ Company Name", year: 4 },
-{ imgUrl: BoyImg, head: "Ragul", desc: "Frontend @ Company Name", year: 2 }];
+const steps = [{ imgUrl: BoyImg, head: "Ragul", desc1: "Frontend @ Company Name",desc2:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries", year: 2 },
+{ imgUrl: DesignImg, head: "Lilly", desc1: "UIUX Designer  @ Company Name",desc2:"Lorem Ipsum is simply dummy text of  when an unknown printer took a  specimen book. It has survived not only five centuries", year: 7 },
+{ imgUrl: BussinessImg, head: "John", desc1: "Frontend  @ Company Name",desc2:"Lorem Ipsum is simply dummy text of the  when an unknown printerfive centuries", year: 4 },
+{ imgUrl: BoyImg, head: "Ragul", desc1: "Frontend @ Company Name",desc2:"Lorem Ipsum is simply dummy text It has survived not only five centuries", year: 2 }];
 
 export default function MentorSec() {
   const theme = useTheme();
@@ -73,29 +73,13 @@ export default function MentorSec() {
             <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: 2 }}>
               <Box sx={{ display: 'flex', overflowX: 'auto', textAlign: "start" }}>
                 {steps.map((info, index) => (
-                  <Card key={index} sx={{
-                    minWidth: 200,
-                    maxWidth: 300,
-                    marginX: 1,
-                    transition: 'transform 0.3s',
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                    },
-                  }}>
-                    <img src={info.imgUrl} alt={`Step ${index + 1}`} style={{ width: '100%' }} />
-                    <CardContent>
-                      <Typography variant="h5" component="h2" sx={{ marginTop: 1 }}>
-                        {info.head}
-                      </Typography>
-                      <Typography color="textSecondary" sx={{ marginTop: 1 }}>
-                        {info.desc}
-                      </Typography>
-                    </CardContent>
-                    <Box sx={{ borderTop: '1px solid rgba(0, 0, 0, 0.12)', padding: 1, marginTop: 'auto', display: "flex", justifyContent: "space-between" }}>
-                      <Typography variant='h5'>{info.year}yr</Typography>
-                      <ArrowOutwardIcon />
-                    </Box>
-                  </Card>
+                    <HoverCard
+                    head={info.head}
+                    year={info.year}
+                    imgUrl={info.imgUrl}
+                    initialContent={info.desc1}
+                    fullContent={info.desc2}
+                  />
                 ))}
               </Box>
             </Box>

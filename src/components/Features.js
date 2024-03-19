@@ -7,7 +7,6 @@ import Play from '../assets/play.png';
 export default function Features() {
   return (
     <Container id="features" sx={{ py: { xs: 4, sm: 8 } }}>
-      <div style={{ display: "flex", justifyContent: "center" }}>
         <Typography
           component="h5"
           variant="h4"
@@ -15,6 +14,7 @@ export default function Features() {
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
             alignSelf: 'center',
+            justifyContent:"center",
             textAlign: 'center',
           }}
         >
@@ -28,7 +28,7 @@ export default function Features() {
           help you
           <span style={{ marginLeft: "-17rem", marginTop: "1rem" }}><img src={UnderLine} height={10} width={100} alt="tick mark" /></span>
         </Typography>
-      </div>
+      
       <div className='container-image'>
         <img src={VideoBack} alt='background video' className='image' height={300} width={700} />
         <img src={Play} alt='play button' className='image2' height={50} width={50} />

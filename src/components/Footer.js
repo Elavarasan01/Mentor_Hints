@@ -40,7 +40,25 @@ export default function Footer() {
           <Typography variant="body2" color="text.secondary" mt={1}>BLOG</Typography>
         </Grid>
         <Grid md={3}>
-          <Typography variant="body2" color="text.secondary" mt={1}>Are you hiring find talend</Typography>
+        <Typography
+          component="h5"
+          variant="body2"
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            alignSelf: 'center',
+            justifyContent:"center",
+            textAlign: 'center',
+          }}
+        >
+          ARE YOU HIRING?&nbsp;
+          <Typography
+            component="span"
+            variant="body2"
+            sx={{ color: "#FF914D" }}>
+           FIND TALEND
+          </Typography>
+        </Typography>
         </Grid>
       </Grid>
     </Container>
