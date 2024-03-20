@@ -17,10 +17,10 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import HoverCard from './HoverCard';
 
-const steps = [{ imgUrl: BoyImg, head: "Ragul", desc1: "Frontend @ Company Name",desc2:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries", year: 2 },
-{ imgUrl: DesignImg, head: "Lilly", desc1: "UIUX Designer  @ Company Name",desc2:"Lorem Ipsum is simply dummy text of  when an unknown printer took a  specimen book. It has survived not only five centuries", year: 7 },
-{ imgUrl: BussinessImg, head: "John", desc1: "Frontend  @ Company Name",desc2:"Lorem Ipsum is simply dummy text of the  when an unknown printerfive centuries", year: 4 },
-{ imgUrl: BoyImg, head: "Ragul", desc1: "Frontend @ Company Name",desc2:"Lorem Ipsum is simply dummy text It has survived not only five centuries", year: 2 }];
+const steps = [{ imgUrl: BoyImg, head: "Ragul", desc1: "Frontend @ Company Name",desc2:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",role:"Frontend Developer",skills:"Html,CSS,Bootstrap", year: 2 },
+{ imgUrl: DesignImg, head: "Lilly", desc1: "UIUX Designer  @ Company Name",desc2:"Lorem Ipsum is simply dummy text of  when an unknown printer took a  specimen book. It has survived not only five centuriesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",role:"UI / UX Designer",skills:"Figma,Photoshop", year: 7 },
+{ imgUrl: BussinessImg, head: "John", desc1: "Frontend  @ Company Name",desc2:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",role:"Backend Developer",skills:"Java,Python", year: 4 },
+{ imgUrl: BoyImg, head: "Ragul", desc1: "Frontend @ Company Name",desc2:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",role:"Frontend Developer",skills:"Html,CSS,Bootstrap", year: 2 }];
 
 export default function MentorSec() {
   const theme = useTheme();
@@ -79,6 +79,8 @@ export default function MentorSec() {
                     imgUrl={info.imgUrl}
                     initialContent={info.desc1}
                     fullContent={info.desc2}
+                    role={info.role}
+                    skills={info.skills}
                   />
                 ))}
               </Box>

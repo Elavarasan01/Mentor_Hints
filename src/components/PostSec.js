@@ -77,6 +77,8 @@ export default function PostSec() {
                     minWidth: 200,
                     maxWidth: 300,
                     marginX: 1,
+                    border:"none",
+                    backgroundColor:"transparent"
                   }}>
                     <img src={info.imgUrl} alt={`Step ${index + 1}`} style={{ width: '100%' }} />
                     <CardContent>

@@ -1,8 +1,11 @@
+@font-face {
+  font-family: "Public sans";
+  src: url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Public Sans", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,13 +20,23 @@ code {
   line-height: 1em !important;
 }
 
+.css-15gwjte-MuiFormLabel-root-MuiInputLabel-root{
+  color: #fff !important;
+}
+
+.css-15gwjte-MuiFormLabel-root-MuiInputLabel-root{
+margin-top: -7px;
+}
+
 .css-14yi5no-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root{
   min-width: 220px !important;
 }
-
+.css-297odx-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root{
+  border: 1px solid #FF914D !important;
+}
 .top-right{
   background-image: url("assets/star.png");
-  background-size: 15% 15%;
+  background-size: 10% 15%;
   background-repeat: no-repeat;
   background-position: top left;
 }
