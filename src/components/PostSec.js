@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import SkirtImg from '../assets/skirt.png';
 import Camera from '../assets/camera.png';
 import Pose from '../assets/posing.png';
-import { Card, CardContent } from '@mui/material';
+import { Card, CardContent, useMediaQuery } from '@mui/material';
 import UnderLine from '../assets/underline.png';
 const logoStyle = {
   width: '140px',
@@ -33,6 +33,7 @@ const steps=[
 ]
 
 export default function PostSec() {
+  const isSmallscreeen = useMediaQuery('((max-width:600px))');
   return (
     <Container id="pricing"
       sx={{
@@ -45,7 +46,7 @@ export default function PostSec() {
     >
           <Typography
           component="h5"
-          variant="h4"
+          variant={isSmallscreeen?"h6":"h4"}
           sx={{
             color: "#0B93DB"
           }}
@@ -53,10 +54,10 @@ export default function PostSec() {
           Stay&nbsp;
           <Typography
             component="span"
-            variant="h4" sx={{ color: "#000" }}>
+            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#000" }}>
            Curious
           </Typography>
-          <div style={{ margin: "-2rem 1rem 0rem 0rem" }}><img src={UnderLine} height={10} width={100} alt="tick mark" /></div>
+          <div style={{ margin: "-2rem 1rem 0rem -8rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?4:10} width={isSmallscreeen?40:100} alt="tick mark" /></div>
         </Typography>
         <Typography variant="body1" color="text.secondary">
         Various versions have evolved over the years, sometimes by accident,
@@ -65,7 +66,7 @@ export default function PostSec() {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: isSmallscreeen?'column':'row',
             gap: 4,
             minWidth: { xs: '100%', sm: '60%' },
             justifyContent:"center",
@@ -78,11 +79,12 @@ export default function PostSec() {
                     maxWidth: 300,
                     marginX: 1,
                     border:"none",
-                    backgroundColor:"transparent"
+                    backgroundColor:"transparent",
+                    marginBottom:isSmallscreeen?5:""
                   }}>
                     <img src={info.imgUrl} alt={`Step ${index + 1}`} style={{ width: '100%' }} />
                     <CardContent>
-                      <Typography variant="h5" component="h2" sx={{ marginTop: 1 }}>
+                      <Typography  variant={isSmallscreeen?"h6":"h5"} component="h2" sx={{ marginTop: 1 }}>
                         {info.head}
                       </Typography>
                       <Typography color="textSecondary" sx={{ marginTop: 1,fontSize:"11px" }}>

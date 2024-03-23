@@ -8,8 +8,10 @@ import UpperCard from '../assets/Card.png';
 import LowerCard from '../assets/Card-2.png';
 import CurlLine from '../assets/curlyline.png';
 import CalenderPic from '../assets/CalenderCard.png';
+import { useMediaQuery } from '@mui/material';
 
 export default function Testimonials() {
+  const isSmallscreeen = useMediaQuery('((max-width:600px))');
   return (
     <Container
       id="testimonials"
@@ -33,19 +35,18 @@ export default function Testimonials() {
       >
         <Typography
           component="h5"
-          variant="h4"
+          variant={isSmallscreeen?"h6":"h4"}
           sx={{
-
             color: "#0B93DB"
           }}
         >
           Learn&nbsp;
           <Typography
             component="span"
-            variant="h4" sx={{ color: "#000" }}>
+            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#000" }}>
             your way
           </Typography>
-          <div style={{ margin: "-2rem 1rem 0rem -8rem" }}><img src={UnderLine} height={10} width={100} alt="tick mark" /></div>
+          <div style={{ margin: "-2rem 1rem 0rem -8rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?4:10} width={isSmallscreeen?40:100} alt="tick mark" /></div>
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Everyone's needs are different - We match you with experienced tutors who
@@ -53,20 +54,20 @@ export default function Testimonials() {
         </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={5} sx={{ textAlign: "left", marginTop: "7rem" }}>
-            <Typography variant='h4'>
+            <Typography  variant={isSmallscreeen?"h6":"h4"}>
               Make Mentor Hint moves in your career
             </Typography>
             <Typography variant="body1" color="text.secondary">
               Access top software developers
               who help you switch to a tech role or get promoted
             </Typography>
-            <img src={CalenderPic} alt='schedule table' height={300} width={300} style={{ marginTop: "5rem", marginBottom: 0 }} />
+            <img src={CalenderPic} alt='schedule table' height={isSmallscreeen? 200: 300} width={isSmallscreeen? 200: 300} style={{ marginTop: "5rem", marginBottom: 0 }} />
           </Grid>
           <Grid item xs={12} sm={6} md={7} sx={{ marginTop: "2rem" }}>
-            <img src={UpperCard} height={200} width={400} />
-            <img src={CurlLine} height={80} width={80} style={{ transform: "rotate(90deg)", marginLeft: "-3rem", zIndex: "-1" }} />
-            <img src={LowerCard} height={125} width={400} style={{ marginTop: "-2rem", marginLeft: "6rem" }} />
-            <Typography variant='h4' sx={{ marginTop: "7rem" }}>
+            <img src={UpperCard} height={isSmallscreeen?100:200} width={isSmallscreeen?200:400} />
+            <img src={CurlLine} height={isSmallscreeen?45:80} width={isSmallscreeen?45:80} style={{ transform: "rotate(90deg)", marginLeft: "25rem",marginTop:"-7rem", zIndex: "-1",display:isSmallscreeen?"none":"block" }} />
+            <img src={LowerCard} height={isSmallscreeen?75:125} width={isSmallscreeen?200:400} style={{marginLeft: "6rem" }} />
+            <Typography  variant={isSmallscreeen?"h6":"h4"} sx={{ marginTop: "7rem" }}>
               Upskill on your own time
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ margin: "1rem" }}>

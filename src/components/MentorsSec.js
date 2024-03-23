@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Button } from '@mui/material';
+import { Button, useMediaQuery } from '@mui/material';
 import UnderLine from "../assets/underline.png";
 import AudiotrackOutlinedIcon from '@mui/icons-material/AudiotrackOutlined';
 import { ReactComponent as PenNib } from '../assets/PenNib.svg';
@@ -23,6 +23,7 @@ const steps = [{ imgUrl: BoyImg, head: "Ragul", desc1: "Frontend @ Company Name"
 { imgUrl: BoyImg, head: "Ragul", desc1: "Frontend @ Company Name",desc2:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",role:"Frontend Developer",skills:"Html,CSS,Bootstrap", year: 2 }];
 
 export default function MentorSec() {
+  const isSmallscreeen = useMediaQuery('((max-width:600px))');
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -36,14 +37,14 @@ export default function MentorSec() {
   return (
     <Box id="logoCollection" sx={{ py: 4,backgroundColor:"#F1F7FF" }}>
       <Grid container>
-        <Grid md={5}>
-          <div style={{ padding: "5rem 5rem 5rem 15rem" }}>
+        <Grid md={5} xs={12} item>
+          <div style={{ padding: "5% 5% 5% 15%" }}>
             <Typography
               component="h1"
-              variant="h4"
+              variant={isSmallscreeen?"h6":"h4"}
               sx={{
                 display: 'flex',
-                flexDirection: { xs: 'column', md: 'row' },
+                flexDirection: { xs: 'row', md: 'row' },
                 alignSelf: 'center',
                 textAlign: 'right',
               }}
@@ -51,18 +52,18 @@ export default function MentorSec() {
               Most&nbsp;
               <Typography
                 component="span"
-                variant="h4"
+                variant={isSmallscreeen?"h6":"h4"}
                 sx={{ color: "#0B93DB" }}>
                 Popular
               </Typography>
-              <span style={{ marginLeft: "-7rem", marginTop: "1rem" }}><img src={UnderLine} height={10} width={100} alt="tick mark" /></span>
+              <span style={{ marginLeft: "-7rem", marginTop: "1rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={10} width={100} alt="tick mark" /></span>
             </Typography>
-            <Typography variant='h4' sx={{ textAlign: "left", color: "#0B93DB" }}>
+            <Typography  variant={isSmallscreeen?"h6":"h4"} sx={{ textAlign: "left", color: "#0B93DB" }}>
               Mentors
             </Typography>
           </div>
         </Grid>
-        <Grid md={7}>
+        <Grid md={7} xs={12} item>
           <div>
             <Button variant='contained' size='small' sx={{ margin: "2px", width: "110px" }}>All</Button>
             <Button sx={{ backgroundColor: "#fff", color: "#000", margin: "2px" }} startIcon={<PenNib style={{ height: 20, width: 20 }} />} variant='contained' size='small'>Design</Button>
@@ -74,6 +75,7 @@ export default function MentorSec() {
               <Box sx={{ display: 'flex', overflowX: 'auto', textAlign: "start" }}>
                 {steps.map((info, index) => (
                     <HoverCard
+                    index={index}
                     head={info.head}
                     year={info.year}
                     imgUrl={info.imgUrl}

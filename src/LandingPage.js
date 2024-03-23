@@ -19,7 +19,7 @@ import MentorSec from './components/MentorsSec';
 import PostSec from './components/PostSec';
 import GD from './components/GD';
 import MentorOutline from './assets/mentorOutline.png';
-import { Grid } from '@mui/material';
+import { Grid, useMediaQuery } from '@mui/material';
 
 function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
   return (
@@ -64,6 +64,7 @@ ToggleCustomTheme.propTypes = {
 };
 
 export default function LandingPage() {
+  const isSmallscreeen = useMediaQuery('((max-width:600px))');
   const [mode, setMode] = React.useState('light');
   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
   const LPtheme = createTheme(getLPTheme(mode));
@@ -95,8 +96,8 @@ export default function LandingPage() {
         <PostSec />
         <GD /> 
         <Footer />
-        <Grid sx={{justifyContent:"center"}} md={12}>
-      <img src={MentorOutline} alt='mentor logo' height={200} width={500}/>
+        <Grid sx={{justifyContent:"center"}} md={12} item>
+      <img src={MentorOutline} alt='mentor logo' height={isSmallscreeen?100:200} width={isSmallscreeen?250:500}/>
      </Grid>
       </Box>
     </ThemeProvider>

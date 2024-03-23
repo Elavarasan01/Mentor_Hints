@@ -20,16 +20,27 @@ code {
   line-height: 1em !important;
 }
 
+.css-1w7yzk6{
+  color: #fff !important;
+}
+
+.css-1w7yzk6{
+  margin-top: -7px !important;
+}
+
 .css-15gwjte-MuiFormLabel-root-MuiInputLabel-root{
   color: #fff !important;
 }
 
 .css-15gwjte-MuiFormLabel-root-MuiInputLabel-root{
-margin-top: -7px;
+margin-top: -7px !important;
 }
 
 .css-14yi5no-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root{
   min-width: 220px !important;
+}
+.css-1iyr9du .MuiOutlinedInput-root{
+  border: 1px solid #FF914D !important;
 }
 .css-297odx-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root{
   border: 1px solid #FF914D !important;
@@ -45,7 +56,7 @@ margin-top: -7px;
   content: "";
 position: absolute;
 top: 180px;
-right: 0px;
+right: 3%;
 width: 20%;
 height: 35%;
 background-size: 38% 34%;
@@ -67,5 +78,9 @@ background-size: 38% 34%;
   left: 48%;
 }
 
-
+@media screen and (max-width: 600px) {
+  .top-right::after {
+    display: none;
+  }
+}
 

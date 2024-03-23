@@ -13,7 +13,7 @@ import Sep2 from '../assets/Date2.png'
 import Sep3 from '../assets/Date3.png'
 import LeftProfile from '../assets/left-profile.png';
 import RightProfile from '../assets/right-profile.png';
-import { Button, CardContent, MobileStepper } from '@mui/material';
+import { Button, CardContent, MobileStepper, useMediaQuery } from '@mui/material';
 import Quatation from '../assets/quatation.png';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import { useTheme } from '@emotion/react';
@@ -36,6 +36,7 @@ const steps2 = [
     In hac habitasse platea dictumst.`}
 ]
 export default function Highlights() {
+  const isSmallscreeen = useMediaQuery('((max-width:600px))');
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -71,16 +72,16 @@ export default function Highlights() {
         >
           <Typography
             component="h5"
-            variant="h4"
+            variant={isSmallscreeen?"h6":"h4"}
             sx={{ color: "#000" }}
           >
             How to&nbsp;
             <Typography
               component="span"
-              variant="h4" sx={{ color: "#0B93DB" }}>
+              variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#0B93DB" }}>
               get started
             </Typography>
-            <div style={{ margin: "-2rem 1rem 0rem 4rem" }}><img src={UnderLine} height={10} width={150} alt="tick mark" /></div>
+            <div style={{ margin: "-2rem 1rem 0rem 4rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?5:10} width={isSmallscreeen?50:150} alt="tick mark" /></div>
           </Typography>
         </Box>
         <Grid container spacing={2.5} sx={{ justifyContent: "center" }}>
@@ -89,11 +90,12 @@ export default function Highlights() {
               minWidth: 200,
               maxWidth: 310,
               marginX: 1,
+              marginBottom:isSmallscreeen?5:""
             }}>
               <img src={info.imageUrl} alt={`Step ${index + 1}`} style={{ width: '100%' }} />
               <div style={{ textAlign: "right", marginTop: "-1.5rem" }}><img src={info.date} width={40} height={40} /></div>
               <CardContent sx={{ textAlign: "left" }}>
-                <Typography variant="h5" component="h5" sx={{ marginTop: 1 }}>
+                <Typography variant={isSmallscreeen?"h6":"h5"} component="h5" sx={{ marginTop: 1 }}>
                   {info.head}
                 </Typography>
                 <Typography variant="body1" color="text.secondary" sx={{ fontSize: "12px" }}>
@@ -106,16 +108,16 @@ export default function Highlights() {
 
         <Typography
           component="h5"
-          variant="h4"
+          variant={isSmallscreeen?"h6":"h4"}
           sx={{ color: "#000" }}
         >
           Student&nbsp;
           <Typography
             component="span"
-            variant="h4" sx={{ color: "#0B93DB" }}>
+            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#0B93DB" }}>
             Feedback
           </Typography>
-          <div style={{ margin: "-2rem 1rem 0rem 8rem" }}><img src={UnderLine} height={10} width={150} alt="tick mark" /></div>
+          <div style={{ margin: "-2rem 1rem 0rem 4rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?5:10} width={isSmallscreeen?50:150} alt="tick mark" /></div>
           <Typography variant="body1" color="text.secondary">
             Various versions have evolved over the years, sometimes by accident,
           </Typography>
@@ -128,11 +130,12 @@ export default function Highlights() {
               minWidth: 200,
               maxWidth: 400,
               marginX: 1,
-              backgroundColor: "#fff"
+              backgroundColor: "#fff",
+              marginBottom:isSmallscreeen?5:""
             }}>
               <CardContent sx={{ textAlign: "left" }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                  <Typography variant="h5" component="h5" sx={{ marginTop: 1, display: "flex", alignItems: "center" }}>
+                  <Typography variant={isSmallscreeen?"h6":"h5"} component="h5" sx={{ marginTop: 1, display: "flex", alignItems: "center" }}>
                     <div><img src={info.imageUrl} height={35} width={35} /></div>
                     <div>{info.head} <br /> <Typography sx={{ fontSize: "11px", margin: "2px" }}>{info.subHead}</Typography></div>
                   </Typography>

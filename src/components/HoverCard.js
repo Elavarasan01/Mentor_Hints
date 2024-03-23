@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { Box, Dialog, DialogContent, DialogTitle, Grid, Paper } from '@mui/material';
+import { Box, Dialog, DialogContent, Grid, Paper, useMediaQuery } from '@mui/material';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 const HoverCard = ({ initialContent, fullContent,head,year,imgUrl,index,role,skills }) => {
-  const [showFullContent, setShowFullContent] = useState(false);
+  const isSmallscreeen = useMediaQuery('((max-width:600px))');
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -41,27 +41,23 @@ const HoverCard = ({ initialContent, fullContent,head,year,imgUrl,index,role,ski
       <Dialog open={open} onClose={handleClose}>
         <DialogContent>
         <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <img src={imgUrl} alt={head} style={{ width: '100%' }} />
             </Grid>
-            <Grid item xs={8}>
+            <Grid item xs={12} md={8}>
               <Box>
-                <Typography variant="h5">{head}</Typography>
-                <Typography variant="body1">{role}</Typography>
-                <Typography variant="body1">{skills}</Typography>
-                <Typography variant="body1">{year}yrs</Typography>
-
+                <Typography variant={isSmallscreeen?"h6":"h5"}>{head}</Typography>
+                <Typography variant={isSmallscreeen?"body2":"body1"}>{role}</Typography>
+                <Typography variant={isSmallscreeen?"body2":"body1"}>{skills}</Typography>
+                <Typography variant={isSmallscreeen?"body2":"body1"}>{year}yrs</Typography>
               </Box>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} md={12}>
               <Paper elevation={0}>
-                <Typography variant="body1">{fullContent}</Typography>
+                <Typography variant={isSmallscreeen?"body2":"body1"}>{fullContent}</Typography>
               </Paper>
             </Grid>
           </Grid>
-          {/* <Typography variant="body1">
-            {fullContent}
-          </Typography> */}
         </DialogContent>
       </Dialog>
       </>
