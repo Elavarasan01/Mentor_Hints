@@ -136,7 +136,7 @@ export default function Highlights() {
               <CardContent sx={{ textAlign: "left" }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <Typography variant={isSmallscreeen?"h6":"h5"} component="h5" sx={{ marginTop: 1, display: "flex", alignItems: "center" }}>
-                    <div><img src={info.imageUrl} height={35} width={35} /></div>
+                    <div style={{marginRight:"10px"}}><img src={info.imageUrl} height={35} width={35} /></div>
                     <div>{info.head} <br /> <Typography sx={{ fontSize: "11px", margin: "2px" }}>{info.subHead}</Typography></div>
                   </Typography>
                   <div><img src={Quatation} alt='quatation mark' width={30} height={30} /></div>

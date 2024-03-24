@@ -57,7 +57,7 @@ export default function PostSec() {
             variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#000" }}>
            Curious
           </Typography>
-          <div style={{ margin: "-2rem 1rem 0rem -8rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?4:10} width={isSmallscreeen?40:100} alt="tick mark" /></div>
+          <div style={{ margin: "-2rem 1rem 0rem 0rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?4:10} width={isSmallscreeen?40:100} alt="tick mark" /></div>
         </Typography>
         <Typography variant="body1" color="text.secondary">
         Various versions have evolved over the years, sometimes by accident,

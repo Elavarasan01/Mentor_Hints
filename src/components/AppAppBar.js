@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
 import BrandLogo from '../assets/MentorLogo.png';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import SimpleDialog from '../components/SimpleDialog';
 
 const logoStyle = {
   width: '140px',
@@ -22,6 +23,17 @@ const logoStyle = {
 
 function AppAppBar({ mode, toggleColorMode }) {
   const [open, setOpen] = React.useState(false);
+  const [openDialog, setOpenDialog] = React.useState(false);
+  const [selectedValue, setSelectedValue] = React.useState("");
+
+  const handleClickOpen = () => {
+    setOpenDialog(true);
+  };
+
+  const handleClose = (value) => {
+    setOpenDialog(false);
+    setSelectedValue(value);
+  };
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -132,6 +144,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 startIcon={<LockOutlinedIcon />}
                 variant="text"
                 size="small"
+                onClick={handleClickOpen}
               >
                 Login
               </Button>
@@ -139,6 +152,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 variant="contained"
                 size="mediem"
                 sx={{ backgroundColor: "#0B93DB" }}
+                onClick={handleClickOpen}
               >
                 Sign up for free
               </Button>
@@ -193,6 +207,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                       variant="contained"
                       component="a"
                       sx={{ width: '100%' }}
+                      onClick={handleClickOpen}
                     >
                       Sign up for free
                     </Button>
@@ -200,6 +215,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                   <MenuItem>
                     <Button
                       sx={{ width: '100%' }}
+                      onClick={handleClickOpen}
                     >
                       Login
                     </Button>
@@ -210,6 +226,11 @@ function AppAppBar({ mode, toggleColorMode }) {
           </Toolbar>
         </Container>
       </AppBar>
+      <SimpleDialog
+        selectedValue={selectedValue}
+        open={openDialog}
+        onClose={handleClose}
+      />
     </div>
   );
 }

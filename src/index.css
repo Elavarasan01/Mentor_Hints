@@ -78,6 +78,10 @@ background-size: 38% 34%;
   left: 48%;
 }
 
+.css-edenly{
+  margin-top: -5px;
+}
+
 @media screen and (max-width: 600px) {
   .top-right::after {
     display: none;

@@ -57,7 +57,7 @@ export default function Footer() {
             component="span"
             variant="body2"
             sx={{ color: "#FF914D" }}>
-           FIND TALEND
+           FIND TALENT
           </Typography>
         </Typography>
         </Grid>

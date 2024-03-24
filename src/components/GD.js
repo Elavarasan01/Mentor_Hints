@@ -41,7 +41,7 @@ export default function GD() {
         <Typography variant="body1" color="text.secondary">
           Start learning by resgistering for free
         </Typography>
-        <Button size={isSmallscreeen?'small':'mediem'} sx={{ margin: "1rem", backgroundColor: "#0B93DB", color: "#fff" }}>Fina a Mentor</Button>
+        <Button size={isSmallscreeen?'small':'mediem'} sx={{ margin: "1rem", backgroundColor: "#0B93DB", color: "#fff" }}>Find a Mentor</Button>
       </Grid>
     </Container>
   );
