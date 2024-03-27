@@ -14,7 +14,8 @@ export default function Features() {
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
-            justifyContent:"center"
+            justifyContent:"center",
+            fontWeight:600
           }}
         >
             {/* <div style={{ margin: "2rem -19rem 0rem 0rem" }}><img src={UnderLine} height={10} width={150} alt="tick mark" /></div> */}
@@ -22,18 +23,18 @@ export default function Features() {
           <Typography
             component="span"
             variant={isSmallscreeen?"h6":"h4"}
-            sx={{ color: "#0B93DB"}}>
+            sx={{ color: "#0B93DB",fontWeight:600}}>
             1:1 mentorship
             <div style={{display:isSmallscreeen?'none':'block'}}><img src={UnderLine} height={10} width={150} alt="tick mark" /></div>
           </Typography>
-          <Typography  variant={isSmallscreeen?"h6":"h4"} sx={{paddingLeft:"7px"}}>
+          <Typography  variant={isSmallscreeen?"h6":"h4"} sx={{paddingLeft:"7px",fontWeight:600}}>
           help you
           </Typography>
           
         </Typography>
       
       <div className='container-image'>
-        <img src={VideoBack} alt='background video' className='image' height={isSmallscreeen?150:400} width={isSmallscreeen?250:800} />
+        <a href='https://www.youtube.com/watch?v=xOJ7fTPhZOA'><img src={VideoBack} alt='background video' className='image' height={isSmallscreeen?150:400} width={isSmallscreeen?250:900} /></a>
         <img src={Play} alt='play button' className='image2' height={isSmallscreeen?20:50} width={isSmallscreeen?20:50} />
       </div>
     </Container>

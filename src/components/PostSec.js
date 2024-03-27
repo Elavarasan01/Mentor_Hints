@@ -48,13 +48,14 @@ export default function PostSec() {
           component="h5"
           variant={isSmallscreeen?"h6":"h4"}
           sx={{
-            color: "#0B93DB"
+            color: "#0B93DB",
+            fontWeight:600
           }}
         >
           Stay&nbsp;
           <Typography
             component="span"
-            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#000" }}>
+            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#000",fontWeight:600 }}>
            Curious
           </Typography>
           <div style={{ margin: "-2rem 1rem 0rem 0rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?4:10} width={isSmallscreeen?40:100} alt="tick mark" /></div>

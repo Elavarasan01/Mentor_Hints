@@ -73,12 +73,12 @@ export default function Highlights() {
           <Typography
             component="h5"
             variant={isSmallscreeen?"h6":"h4"}
-            sx={{ color: "#000" }}
+            sx={{ color: "#000",fontWeight:600 }}
           >
             How to&nbsp;
             <Typography
               component="span"
-              variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#0B93DB" }}>
+              variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#0B93DB",fontWeight:600 }}>
               get started
             </Typography>
             <div style={{ margin: "-2rem 1rem 0rem 4rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?5:10} width={isSmallscreeen?50:150} alt="tick mark" /></div>
@@ -95,7 +95,7 @@ export default function Highlights() {
               <img src={info.imageUrl} alt={`Step ${index + 1}`} style={{ width: '100%' }} />
               <div style={{ textAlign: "right", marginTop: "-1.5rem" }}><img src={info.date} width={40} height={40} /></div>
               <CardContent sx={{ textAlign: "left" }}>
-                <Typography variant={isSmallscreeen?"h6":"h5"} component="h5" sx={{ marginTop: 1 }}>
+                <Typography variant="h6" component="h5" sx={{ marginTop: 1,fontWeight:700 }}>
                   {info.head}
                 </Typography>
                 <Typography variant="body1" color="text.secondary" sx={{ fontSize: "12px" }}>
@@ -109,12 +109,12 @@ export default function Highlights() {
         <Typography
           component="h5"
           variant={isSmallscreeen?"h6":"h4"}
-          sx={{ color: "#000" }}
+          sx={{ color: "#000",fontWeight:600 }}
         >
           Student&nbsp;
           <Typography
             component="span"
-            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#0B93DB" }}>
+            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#0B93DB",fontWeight:600 }}>
             Feedback
           </Typography>
           <div style={{ margin: "-2rem 1rem 0rem 4rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={isSmallscreeen?5:10} width={isSmallscreeen?50:150} alt="tick mark" /></div>
@@ -128,7 +128,7 @@ export default function Highlights() {
           {steps2.map((info, index) => (
             <Card key={index} sx={{
               minWidth: 200,
-              maxWidth: 400,
+              maxWidth: 450,
               marginX: 1,
               backgroundColor: "#fff",
               marginBottom:isSmallscreeen?5:""

@@ -25,18 +25,19 @@ export default function GD() {
           component="h5"
           variant={isSmallscreeen?"h6":"h4"}
           sx={{
-            color: "#000"
+            color: "#000",
+            fontWeight:600
           }}
         >
           Join the&nbsp;
           <Typography
             component="span"
-            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#0B93DB" }}>
+            variant={isSmallscreeen?"h6":"h4"} sx={{ color: "#0B93DB",fontWeight:600 }}>
             best learning
           </Typography>
         </Typography>
-        <Typography variant={isSmallscreeen?"h6":"h4"}>
-          Platform
+        <Typography variant={isSmallscreeen?"h6":"h4"} sx={{fontWeight:600}}>
+          Platform.
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Start learning by resgistering for free

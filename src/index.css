@@ -88,3 +88,35 @@ background-size: 38% 34%;
   }
 }
 
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust shadow properties as needed */
+  border-radius: 5px; /* Adjust border radius as needed */
+  z-index: -1;
+}
+
+.image-container.small-screen::before {
+  width: 150px; /* Adjust width for small screen */
+  height: 150px; /* Adjust height for small screen */
+}
+
+.image-container.large-screen::before {
+  width: 200px; /* Adjust width for large screen */
+  height: 270px; /* Adjust height for large screen */
+}
+

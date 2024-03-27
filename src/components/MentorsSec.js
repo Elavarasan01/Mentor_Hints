@@ -37,7 +37,7 @@ export default function MentorSec() {
   return (
     <Box id="logoCollection" sx={{ py: 4,backgroundColor:"#F1F7FF" }}>
       <Grid container>
-        <Grid md={5} xs={12} item>
+        <Grid md={5} xs={12} item sx={{justifyContent:"center",display:"flex",alignItems:"center"}}>
           <div style={{ padding: "5% 5% 5% 15%" }}>
             <Typography
               component="h1"
@@ -47,18 +47,19 @@ export default function MentorSec() {
                 flexDirection: { xs: 'row', md: 'row' },
                 alignSelf: 'center',
                 textAlign: 'right',
+                fontWeight:600
               }}
             >
               Most&nbsp;
               <Typography
                 component="span"
                 variant={isSmallscreeen?"h6":"h4"}
-                sx={{ color: "#0B93DB" }}>
+                sx={{ color: "#0B93DB", fontWeight:600 }}>
                 Popular
               </Typography>
               <span style={{ marginLeft: "-7rem", marginTop: "1rem",display:isSmallscreeen?'none':'block' }}><img src={UnderLine} height={10} width={100} alt="tick mark" /></span>
             </Typography>
-            <Typography  variant={isSmallscreeen?"h6":"h4"} sx={{ textAlign: "left", color: "#0B93DB" }}>
+            <Typography  variant={isSmallscreeen?"h6":"h4"} sx={{ textAlign: "left", color: "#0B93DB", fontWeight:600 }}>
               Mentors
             </Typography>
           </div>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { Button, InputAdornment, TextField, Typography, useMediaQuery } from '@mui/material';
+import { Button, InputAdornment, Paper, TextField, Typography, useMediaQuery } from '@mui/material';
 import UnderLine from '../assets/underline.png';
 import Frame1 from '../assets/girl-frame.png';
 import Frame2 from '../assets/boy-frame.png';
@@ -37,10 +37,10 @@ export default function BannerSec() {
             >
                 <div style={{ display: "flex", flexDirection: isSmallscreeen ? "column" : "row" }}>
                     <div style={{ textAlign: "left", paddingLeft: isSmallscreeen ? "0rem" : "5rem" }}>
-                        <Typography variant='h6'>START TO SUCCESS</Typography>
-                        <Typography sx={{ color: "#fff" }} variant={isSmallscreeen ? 'h5' : 'h4'}>Learn to code</Typography>
+                        <Typography variant='h6' sx={{fontWeight:600}}>START TO SUCCESS</Typography>
+                        <Typography sx={{ color: "#fff",fontWeight:600 }} variant={isSmallscreeen ? 'h5' : 'h4'}>Learn to code</Typography>
                         <span style={{ marginLeft: "9rem", display: isSmallscreeen ? 'none' : 'block' }}><img src={UnderLine} height={10} width={70} alt="tick mark" /></span>
-                        <Typography sx={{ color: "#fff", letterSpacing: "3px" }} variant={isSmallscreeen ? 'h5' : 'h4'}>with your personal mentor</Typography>
+                        <Typography sx={{ color: "#fff", letterSpacing: "3px",fontWeight:600 }} variant={isSmallscreeen ? 'h5' : 'h4'}>with your personal mentor</Typography>
                         <span><img src={UnderLine} alt="tick mark" style={{
                             maxWidth: '50%',
                             height: '3%',
@@ -58,7 +58,7 @@ export default function BannerSec() {
                             ),
                         }} label="Search by mentor" sx={{ padding: "0px", margin: "5px", width: "50%" }} />
                     </div>
-                    <div style={{ display: "flex" }} className='top-right'>
+                    <div style={{ display: "flex" }} className='top-right'>           
                         <img src={Frame1} alt='girl in the frame' height={isSmallscreeen ? 150 : 270} width={isSmallscreeen ? 150 : 200} />
                         <img src={Frame2} alt='boy in the frame' height={isSmallscreeen ? 150 : 270} width={isSmallscreeen ? 150 : 200} style={{ zIndex: '33', marginLeft: "-30px" }} />
                         <div style={{ display: "flex", alignItems: "center", marginLeft: "-4rem", marginTop: "9rem", zIndex: "99" }}>
